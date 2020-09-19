@@ -13,34 +13,39 @@ public class RestaurantService {
     @Autowired
     private RestaurantRepository repository;
 
-    public Restaurant saveProduct(Restaurant restaurant) {
+    public Restaurant saveRestaurant(Restaurant restaurant) {
         return repository.save(restaurant);
     }
 
-    public List<Restaurant> saveProducts(List<Restaurant> restaurant) {
+    public List<Restaurant> saveRestaurants(List<Restaurant> restaurant) {
         return repository.saveAll(restaurant);
     }
 
-    public List<Restaurant> getProducts() {
+    public List<Restaurant> getRestaurants() {
         return repository.findAll();
     }
 
-    public Restaurant getProductById(int id) {
+    public Restaurant getRestaurantById(int id) {
         return repository.findById(id).orElse(null);
     }
 
-    public Restaurant getProductByName(String name) {
+    public Restaurant getRestaurantByName(String name) {
         return repository.findByName(name);
     }
 
-    public String deleteProduct(int id) {
+    public String deleteRestaurant(int id) {
         repository.deleteById(id);
         return "Restaurant removed !! " + id;
     }
 
-    public Restaurant updateProduct(Restaurant restaurant) {
+    public Restaurant updateRestaurant(Restaurant restaurant) {
     	Restaurant existingRestaurant = repository.findById(restaurant.getId()).orElse(null);
         existingRestaurant.setName(restaurant.getName());
+        existingRestaurant.setAddress(restaurant.getAddress());
+        existingRestaurant.setOpentime(restaurant.getOpentime());
+        existingRestaurant.setClosetime(restaurant.getClosetime());
+        existingRestaurant.setPhnno(restaurant.getPhnno());
+        existingRestaurant.setMenu(restaurant.getMenu());
         
         return repository.save(existingRestaurant);
     }

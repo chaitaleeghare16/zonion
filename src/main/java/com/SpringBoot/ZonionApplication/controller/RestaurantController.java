@@ -17,36 +17,36 @@ public class RestaurantController {
 
     @PostMapping("/addRestaurant")
     public Restaurant addProduct(@RequestBody Restaurant restaurant) {
-        return service.saveProduct(restaurant);
+        return service.saveRestaurant(restaurant);
     }
 
     @PostMapping("/addRestaurants")
     public List<Restaurant> addProducts(@RequestBody List<Restaurant> restaurant) {
-        return service.saveProducts(restaurant);
+        return service.saveRestaurants(restaurant);
     }
 
     @GetMapping("/restaurants")
     public List<Restaurant> findAllProducts() {
-        return service.getProducts();
+        return service.getRestaurants();
     }
 
     @GetMapping("/restaurantById/{id}")
     public Restaurant findProductById(@PathVariable int id) {
-        return service.getProductById(id);
+        return service.getRestaurantById(id);
     }
 
     @GetMapping("/restaurant/{name}")
     public Restaurant findProductByName(@PathVariable String name) {
-        return service.getProductByName(name);
+        return service.getRestaurantByName(name);
     }
-//
-//    @PutMapping("/update")
-//    public Restaurant updateProduct(@RequestBody Restaurant restaurant) {
-//        return service.updateProduct(restaurant);
-//    }
-//
-//    @DeleteMapping("/delete/{id}")
-//    public String deleteProduct(@PathVariable int id) {
-//        return service.deleteProduct(id);
-//    }
+
+    @PutMapping("/update")
+    public Restaurant updateProduct(@RequestBody Restaurant restaurant) {
+        return service.updateRestaurant(restaurant);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable int id) {
+        return service.deleteRestaurant(id);
+    }
 }
