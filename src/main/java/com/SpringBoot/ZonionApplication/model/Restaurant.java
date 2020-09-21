@@ -1,5 +1,10 @@
 package com.SpringBoot.ZonionApplication.model;
 
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,9 +14,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
+
 @Entity
 @Table(name = "RESTAURANT")
 public class Restaurant {
@@ -24,9 +28,9 @@ public class Restaurant {
 	    private String closetime;
 	    private String Phnno;
 	    private String menu;
-	    
-	    
-	    
+	   
+		
+
 		public Restaurant() {
 			super();
 			// TODO Auto-generated constructor stub
@@ -88,8 +92,11 @@ public class Restaurant {
 			this.menu = menu;
 		}
 
+		
+		
+
 		public Restaurant(int id, String name, String address, String opentime, String closetime, String phnno,
-				String menu) {
+				String menu, Timestamp time) {
 			super();
 			this.id = id;
 			this.name = name;
@@ -98,6 +105,7 @@ public class Restaurant {
 			this.closetime = closetime;
 			Phnno = phnno;
 			this.menu = menu;
+			
 		}
 
 		@Override
@@ -105,7 +113,7 @@ public class Restaurant {
 			return "Restaurant [id=" + id + ", name=" + name + ", address=" + address + ", opentime=" + opentime
 					+ ", closetime=" + closetime + ", Phnno=" + Phnno + ", menu=" + menu + "]";
 		}
-		
+
 		
 	    
 	    
