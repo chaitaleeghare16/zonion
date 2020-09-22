@@ -34,7 +34,8 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
     	LOGGER.debug("Entering into getRestaurants method");
     	LOGGER.info("restaurants data get successfully");
-    	
+    	Restaurant res =new Restaurant();
+   System.out.println(res.getUpdatedts());
    
         return repository.findAll();
     }

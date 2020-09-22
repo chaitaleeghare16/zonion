@@ -28,75 +28,17 @@ public class Restaurant {
 	    private String closetime;
 	    private String Phnno;
 	    private String menu;
-	   
-		
-
+	    private Timestamp updatedts;
+	    
+	    
 		public Restaurant() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-		public int getId() {
-			return id;
-		}
-
-		public void setId(int id) {
-			this.id = id;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getAddress() {
-			return address;
-		}
-
-		public void setAddress(String address) {
-			this.address = address;
-		}
-
-		public String getOpentime() {
-			return opentime;
-		}
-
-		public void setOpentime(String opentime) {
-			this.opentime = opentime;
-		}
-
-		public String getClosetime() {
-			return closetime;
-		}
-
-		public void setClosetime(String closetime) {
-			this.closetime = closetime;
-		}
-
-		public String getPhnno() {
-			return Phnno;
-		}
-
-		public void setPhnno(String phnno) {
-			Phnno = phnno;
-		}
-
-		public String getMenu() {
-			return menu;
-		}
-
-		public void setMenu(String menu) {
-			this.menu = menu;
-		}
-
-		
-		
-
+	  
 		public Restaurant(int id, String name, String address, String opentime, String closetime, String phnno,
-				String menu, Timestamp time) {
+				String menu, Timestamp updatedts) {
 			super();
 			this.id = id;
 			this.name = name;
@@ -105,18 +47,98 @@ public class Restaurant {
 			this.closetime = closetime;
 			Phnno = phnno;
 			this.menu = menu;
-			
+			this.updatedts = updatedts;
 		}
+
+		
+		
+
+		public int getId() {
+			return id;
+		}
+
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+
+		public String getName() {
+			return name;
+		}
+
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+
+		public String getAddress() {
+			return address;
+		}
+
+
+		public void setAddress(String address) {
+			this.address = address;
+		}
+
+
+		public String getOpentime() {
+			return opentime;
+		}
+
+
+		public void setOpentime(String opentime) {
+			this.opentime = opentime;
+		}
+
+
+		public String getClosetime() {
+			return closetime;
+		}
+
+
+		public void setClosetime(String closetime) {
+			this.closetime = closetime;
+		}
+
+
+		public String getPhnno() {
+			return Phnno;
+		}
+
+
+		public void setPhnno(String phnno) {
+			Phnno = phnno;
+		}
+
+
+		public String getMenu() {
+			return menu;
+		}
+
+
+		public void setMenu(String menu) {
+			this.menu = menu;
+		}
+
+
+		public Timestamp getUpdatedts() {
+			return updatedts;
+		}
+
+
+		public void setUpdatedts(Timestamp updatedts) {
+			this.updatedts = updatedts;
+		}
+
 
 		@Override
 		public String toString() {
 			return "Restaurant [id=" + id + ", name=" + name + ", address=" + address + ", opentime=" + opentime
-					+ ", closetime=" + closetime + ", Phnno=" + Phnno + ", menu=" + menu + "]";
+					+ ", closetime=" + closetime + ", Phnno=" + Phnno + ", menu=" + menu + ", updatedts=" + updatedts
+					+ "]";
 		}
-
-		
-	    
-	    
-	  
+	
 	  
 }

@@ -40,7 +40,10 @@ public class RestaurantController {
     @GetMapping("/restaurantById/{id}")
     public Restaurant findRestaurantById(@PathVariable int id) {
     	System.out.println("id from url"+id);
+    	Restaurant res=service.getRestaurantById(id);
+    	System.out.println("open time"+res.getOpentime());
     	LOGGER.info("inside restaurant controller");
+    	
         return service.getRestaurantById(id);
     }
 
