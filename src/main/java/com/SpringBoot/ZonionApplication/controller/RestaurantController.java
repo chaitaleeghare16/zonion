@@ -55,7 +55,7 @@ public class RestaurantController {
 
     @PutMapping("/update")
     public Restaurant updateRestaurant(@RequestBody Restaurant restaurant) {
-    	LOGGER.info("inside restaurant controller");
+    	LOGGER.info("inside update restaurant controller");
         return service.updateRestaurant(restaurant);
     }
 

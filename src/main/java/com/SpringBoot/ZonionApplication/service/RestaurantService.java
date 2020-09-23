@@ -28,6 +28,7 @@ public class RestaurantService {
     	
 	LOGGER.debug("Entering into saveRestaurants method");
     	LOGGER.info("restaurants data added successfully");
+    	
         return repository.saveAll(restaurant);
     }
 
@@ -63,7 +64,7 @@ public class RestaurantService {
     }
 
     public Restaurant updateRestaurant(Restaurant restaurant) {
-    	LOGGER.debug("entering into restaurants delete By id ");
+    	LOGGER.debug("entering into restaurants service updateByid  ");
     	
     	Restaurant existingRestaurant = repository.findById(restaurant.getId()).orElse(null);
         existingRestaurant.setName(restaurant.getName());
@@ -71,7 +72,8 @@ public class RestaurantService {
         existingRestaurant.setOpentime(restaurant.getOpentime());
         existingRestaurant.setClosetime(restaurant.getClosetime());
         existingRestaurant.setPhnno(restaurant.getPhnno());
-        existingRestaurant.setMenu(restaurant.getMenu());
+        existingRestaurant.setRestaurant_img(restaurant.getRestaurant_img());
+        existingRestaurant.setMenu_img(restaurant.getMenu_img());
        
       	LOGGER.info("restaurants data updated successfully");
         

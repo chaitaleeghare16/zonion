@@ -54,7 +54,7 @@ public class ImageController {
 	       // String name = file.getName();
 	        LOGGER.info("file name is "+name);
 	        LOGGER.info("restaurantname is :"+restname);
-	        String finalfileName = name.concat("_").concat(restname).concat(FilenameUtils.getExtension(file.getOriginalFilename()));
+	        String finalfileName = restname.concat("_").concat(name); //filepath as-> restaurantname_imagename
 	        Path fileNamePath = Paths.get(imageDirectory,finalfileName);
 	        LOGGER.info("filepath  is "+fileNamePath);
 	        try {
